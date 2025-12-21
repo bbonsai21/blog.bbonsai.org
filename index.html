@@ -32,10 +32,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-    // 1. Define your posts here in a simple list
-    const posts = [
-        { title: "First System Log", file: "post1.md", date: "2025-12-21" },
-        { title: "On Minimalism", file: "post2.md", date: "2025-12-20" }
+    const posts = [ // format: { title: "...", file: "path", date: "xx/yy/zz" }
     ];
 
     const contentDiv = document.getElementById('content');
@@ -43,13 +40,11 @@
     const postFile = urlParams.get('post');
 
     if (postFile) {
-        // VIEWING A POST
         fetch(postFile + '?t=' + new Date().getTime())
             .then(res => res.text())
             .then(md => { contentDiv.innerHTML = marked.parse(md); })
             .catch(() => { contentDiv.innerHTML = "Post not found."; });
     } else {
-        // VIEWING THE INDEX
         let html = "";
         posts.forEach(p => {
             html += `<a class="post-link" href="?post=${p.file}">
