@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dingleberija Blog</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #555555;
+            --border: #eaeaea;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            max-width: 680px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        /* Markdown Content Styling */
+        #content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 2rem 0;
+            display: block;
+        }
+
+        #content h1, #content h2, #content h3 {
+            margin-top: 2.5rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        #content p {
+            margin-bottom: 1.5rem;
+        }
+
+        #content blockquote {
+            border-left: 3px solid var(--border);
+            margin: 0;
+            padding-left: 20px;
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        #content a {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: var(--border);
+            text-underline-offset: 4px;
+        }
+
+        #content a:hover {
+            text-decoration-color: var(--text);
+        }
+
+        footer {
+            margin-top: 100px;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header>
+        <h1>Dingleberija / Blog</h1>
+    </header>
+
+    <div id="content">Loading...</div>
+
+    <footer>
+        &copy; 2025 dingleberija.com
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    const blogUrl = 'blog.md?t=' + new Date().getTime();
+
+    fetch(blogUrl)
+        .then(response => {
+            if (!response.ok) throw new Error("File not found");
+            return response.text();
+        })
+        .then(text => {
+            document.getElementById('content').innerHTML = marked.parse(text);
+        })
+        .catch(err => {
+            document.getElementById('content').innerHTML = "<p>Post unavailable.</p>";
+        });
+</script>
+
+</body>
+</html>
