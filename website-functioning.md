@@ -35,4 +35,4 @@ So that everyone can set up a nice webpage the way I did. <br>
 This post is meant to be updated soon with even more details (e.g. the bash implementation of my terminal commands, a step by step guide and tips).
 <br>
 
-Copyright 2025-2035
+Have a prosperous life, Internet.
