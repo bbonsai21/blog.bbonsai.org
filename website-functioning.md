@@ -26,8 +26,8 @@ with `blog-save [git_push_msg]`.
 `archive-save` and it's committed and pushed to git.
 <br>
 
-# Who is Dingleberry/BlueBonsai?
-Check [me](https://dingleberija.com) out.
+# Who is BlueBonsai?
+Check [me](https://bbonsai.org) out.
 <br>
 
 # Why is this the first blog post?
