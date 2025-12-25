@@ -5,17 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonsai Blog</title>
     <style>
-        :root { --bg: #ffffff; --text: #1a1a1a; --accent: #777; --border: #eaeaea; }
+        :root { --bg: #ffffff; --text: #1a1a1a; --accent: #777; --border: #eaeaea; --code-bg: #f5f5f5; }
         body { font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; margin: 0; }
         #container { max-width: 80%; margin: 60px auto; padding: 0 20px; }
+        
         header { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
         header a { text-decoration: none; color: #0000FF; font-weight: 600; }
+        
         .post-link { display: block; margin-bottom: 15px; text-decoration: none; color: var(--text); }
         .post-link:hover { color: var(--accent); }
         .date { color: var(--accent); font-size: 0.85rem; margin-right: 15px; font-variant-numeric: tabular-nums; }
+        
+        /* Content Styling */
+        #content h1 { margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
         #content img { max-width: 100%; height: auto; border-radius: 4px; margin: 2rem 0; }
-        #content a { color: var(--text); text-underline-offset: 4px; }
-	::target-text { background-color: #000000; color: #fff200; }
+        #content a { color: #0000FF; text-underline-offset: 4px; }
+        
+        /* Code Block Styling */
+        pre { background: var(--code-bg); padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid var(--border); }
+        code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 0.9rem; }
+        
+        ::target-text { background-color: #000000; color: #fff200; }
         footer { margin-top: 80px; font-size: 0.8rem; color: var(--accent); border-top: 1px solid var(--border); padding-top: 20px; }
     </style>
 </head>
@@ -26,15 +36,24 @@
         <a href="/">Bonsai</a> blog
     </header>
 
-    <div id="content">Loading...</div>
+    <div id="content">
+        Loading...
+    </div>
 
-    <footer>&copy; 2025-2035</footer>
+    <footer>© 2025-2035</footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
 <script>
-    const posts = [ // format: { title: "...", file: "path", date: "xx/yy/zz" }
-	    {title: "Hello, Internet!", file: "posts/website-functioning.md", date: "21/12/2025" }
+    /* Initialize the parser with HTML support enabled */
+    const md = window.markdownit({
+        html: true,
+        linkify: true,
+        typographer: true
+    });
+
+    const posts = [
+        {title: "Hello, Internet!", file: "posts/website-functioning.md", date: "21/12/2025" }
     ];
 
     const contentDiv = document.getElementById('content');
@@ -42,19 +61,30 @@
     const postFile = urlParams.get('post');
 
     if (postFile) {
+        /* Fetch with cache-busting timestamp */
         fetch(postFile + '?t=' + new Date().getTime())
-            .then(res => res.text())
-            .then(md => { contentDiv.innerHTML = marked.parse(md); })
-            .catch(() => { contentDiv.innerHTML = "Post not found."; });
+            .then(res => {
+                if (!res.ok) throw new Error("File not found");
+                return res.text();
+            })
+            .then(text => { 
+                /* Parse and Inject */
+                contentDiv.innerHTML = md.render(text); 
+            })
+            .catch(err => { 
+                contentDiv.innerHTML = "<h1>Error</h1><p>Post not found or path is incorrect.</p>"; 
+            });
     } else {
+        /* Render Post List */
         let html = "";
         posts.forEach(p => {
             html += `<a class="post-link" href="?post=${p.file}">
                         <span class="date">${p.date}</span> ${p.title}
                      </a>`;
         });
-        contentDiv.innerHTML = html;
+        contentDiv.innerHTML = html || "<p>No posts yet.</p>";
     }
 </script>
+
 </body>
 </html>
