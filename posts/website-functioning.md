@@ -18,23 +18,19 @@ and I don't think that's fancy.<br>
 I am not a web developer, nor I have any desire for better styling: the 'retro' style (particularly, [this](https://cv.bbonsai.org)) is very
 nice on its own, and it doesn't require anything else to look great.
 <br>
-<br>
 
 # Where do I host my pages?
 
 Everything is being hosted on my [Github](https://github.com/bbonsai21), via [Github pages](https://docs.github.com/en/pages).
 Only real cost is the domain: we're talking about 1 euro a month for the next 10 years - a risible sum.
 I bought it on [Porkbun](https://porkbun.com). Check it out!
-<br>
-<br>
 
 # How does Porkbun function?
 
 To get yourself a domain you'll need a domain seller. Porkbun does this, for decent prices. Other famous domain sellers are:<br>
 - [GoDaddy](https://godaddy.com) (yeah, I know...)
 - [Namecheap](https://namecheap.com)
-<br>
-<br>
+
 I used porkbun because I received good reviews from other users and their maintaining team is pretty friendly (they are pretty hilarious).
 <br>
 But how does it work? First off, go to their website. Check if the domain you want is present there. If not, you'll better use the original
@@ -53,13 +49,13 @@ You do that by going to your Github Settings > Pages (on the left menu, after ha
 the steps presented to you by the Github page.
 <br>
 After this you're ready to connect your webpage repo to your domain:<br>
-1. go to your repo
-2. open repo Settings
-3. Pages
-4. set the branch to master
-5. add your custom domain as `https://your-domain.com` (e.g. https:bbonsai.com - no need of the `www.` subdomain prefix)
-6. wait for it to complete the verification
-7. tick `Enforce HTTPS`.
+1. go to your repo<br>
+2. open repo Settings<br>
+3. Pages<br>
+4. set the branch to master<br>
+5. add your custom domain as `https://your-domain.com` (e.g. https:bbonsai.com - no need of the `www.` subdomain prefix)<br>
+6. wait for it to complete the verification<br>
+7. tick `Enforce HTTPS`.<br>
 <br>
 Please, notice that options 5-7 could take some minutes for them to complete. Don't panic if it's not instantaneous. Wait until Github gives 
 you the OK to proceed.<br>
