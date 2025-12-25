@@ -17,7 +17,6 @@ the weirdest thing you might come across is a .js fetch script that loads .md fi
 and I don't think that's fancy.<br>
 I am not a web developer, nor I have any desire for better styling: the 'retro' style (particularly, [this](https://cv.bbonsai.org)) is very
 nice on its own, and it doesn't require anything else to look great.
-<br>
 
 # Where do I host my pages?
 
@@ -65,14 +64,7 @@ Notice, again, that this process works for setting up domains and sub-domains, b
 DNS configuration: you'll have to set the ALIAS to have the subdomain you wish to utilise (e.g. you're reading this post on
 **blog**.bbonsai.org - my main domain is bbonsai; another sub-domain I have is **cv**).
 <br>
-In any case - if you are stuck and an LLM doesn't help, please feel free to
-
-[contact me](https://cv.bbonsai.org)
-
-anytime!
-
-<br>
-<br>
+In any case - if you are stuck and an LLM doesn't help, please feel free to [contact me](https://cv.bbonsai.org) anytime!
 
 # How do I manage the website?
 
@@ -130,8 +122,6 @@ blog-save() {
 And that's about it. This clearly implies you understand a bit of `bash` and `git`, besides some `Github`.
 If you do not, please consider learning more about them (either browser the Internet or ask an AI to explain in great detail - they'll both
 do better explaining than whatever I could ever do myself).
-<br>
-<br>
 
 # Final notes
 
