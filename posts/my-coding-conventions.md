@@ -24,8 +24,12 @@ if ( isAlive() )
 }
 ```
 
-- If a language allows for classes to be in the samae file, that should be absolutely avoided. 1 file, 1 class. This works especially for Lua,
+- If a language allows for classes to be in the same file, that should be absolutely avoided. 1 file, 1 class. This works especially for Lua,
 where we don't really have classes but we can emulate them with a bit of metatables tweaking.
+
+- If a language allows for Java-like *static* methods, and if the language allows it, the constructor should not be used, but instead direct
+calls to the static methods should be made (e.g. Math.pow(); that'd be foul, pointless and confusing to be allowed to do Math m = new Math()).
+If possible, enforce via a private constructor.
 
 # C
 1. variables
