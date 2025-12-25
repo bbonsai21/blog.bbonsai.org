@@ -65,7 +65,11 @@ Notice, again, that this process works for setting up domains and sub-domains, b
 DNS configuration: you'll have to set the ALIAS to have the subdomain you wish to utilise (e.g. you're reading this post on
 **blog**.bbonsai.org - my main domain is bbonsai; another sub-domain I have is **cv**).
 <br>
-In any case - if you are stuck and an LLM doesn't help, please feel free to [contact me](https://cv.bbonsai.org) anytime!
+In any case - if you are stuck and an LLM doesn't help, please feel free to
+
+[contact me](https://cv.bbonsai.org)
+
+anytime!
 
 <br>
 <br>
