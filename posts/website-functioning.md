@@ -30,9 +30,10 @@ I bought it on [Porkbun](https://porkbun.com). Check it out!
 
 # How does Porkbun function?
 
-To get yourself a domain you'll need a domain seller. Porkbun does this, for decent prices. Other famous domain sellers are:
-[GoDaddy](https://godaddy.com) (yeah, I know...) and
-[Namecheap](https://namecheap.com)
+To get yourself a domain you'll need a domain seller. Porkbun does this, for decent prices. Other famous domain sellers are:<br>
+- [GoDaddy](https://godaddy.com) (yeah, I know...)
+- [Namecheap](https://namecheap.com)
+<br>
 <br>
 I used porkbun because I received good reviews from other users and their maintaining team is pretty friendly (they are pretty hilarious).
 <br>
@@ -66,7 +67,7 @@ If you encounter a problem during any of these steps, best thing is to either br
 I managed to do everything right.<br>
 Notice, again, that this process works for setting up domains and sub-domains, but for for sub-domains you'll need to add a slightly different
 DNS configuration: you'll have to set the ALIAS to have the subdomain you wish to utilise (e.g. you're reading this post on
-**blog** .bbonsai.org - my main domain is bbonsai; another sub-domain I have is **cv**).
+<mark>blog</mark>.bbonsai.org - my main domain is bbonsai; another sub-domain I have is <mark>cv</mark>).
 <br>
 In any case - if you are stuck and an LLM doesn't help, please feel free to [contact me](https://cv.bbonsai.org) anytime!
 
@@ -81,13 +82,14 @@ I don't have much of a burden on my shoulders. I simply have to do the following
 and `blog-save` to push it to Github.
 <br>
 Clearly, this works very well if you've set up the right commands. Here's how to do it on Linux (to do it on Windows or other systems, it's up to
-you translating the following to your OS-specific bash-like language[^1]):
+you translating the following to your OS-specific bash-like language [^1]):
 <br>
 Here we presume you already have a Github page; then, create a folder anywhere you wish to keep your website locally, and type:<br>
 ```bash
 cd [your-local-folder-path]
 git pull [link-to-your-github-repo]
 ```
+
 Now comes the fun:
 ```bash
 cd [your-repo]
