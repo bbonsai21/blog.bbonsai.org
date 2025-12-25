@@ -53,7 +53,7 @@ After this you're ready to connect your webpage repo to your domain:<br>
 2. open repo Settings<br>
 3. Pages<br>
 4. set the branch to master<br>
-5. add your custom domain as `https://your-domain.com` (e.g. https://bbonsai.com - no need of the `www.` subdomain prefix)<br>
+5. add your custom domain as `https://your-domain.postfix` (e.g. `https://bbonsai.org` - no need of the `www.` subdomain prefix)<br>
 6. wait for it to complete the verification<br>
 7. tick `Enforce HTTPS`.<br>
 <br>
@@ -78,22 +78,24 @@ I don't have much of a burden on my shoulders. I simply have to do the following
 and `blog-save` to push it to Github.
 <br>
 Clearly, this works very well if you've set up the right commands. Here's how to do it on Linux (to do it on Windows or other systems, it's up to
-you translating the following to your OS-specific bash-like language [^1]):
-<br>
+you translating the following to your OS-specific bash-like language [^1]):<br>
 
 Here we presume you already have a Github page; then, create a folder anywhere you wish to keep your website locally, and type:
+
 ```bash
 cd [your-local-folder-path]
 git pull [link-to-your-github-repo]
 ```
 
 Now comes the fun:
+
 ```bash
 cd [your-repo]
 nano ~/.bashrc
 ```
 
 And add the following to the end of the bash file:
+
 ```bash
 # Create or modify blog post
 blog() {
@@ -161,4 +163,4 @@ of their time. That's the greatest of all honours: being part of someone else's 
 <br>
 Have a prosperous life, Internet.
 
-[^1]: [Here](https://learn.microsoft.com/en-us/windows/wsl/install) is a possible solution!
+[1]: [Here](https://learn.microsoft.com/en-us/windows/wsl/install) is a possible solution!
