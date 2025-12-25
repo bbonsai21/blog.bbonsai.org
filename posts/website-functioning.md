@@ -63,7 +63,7 @@ If you encounter a problem during any of these steps, best thing is to either br
 I managed to do everything right.<br>
 Notice, again, that this process works for setting up domains and sub-domains, but for for sub-domains you'll need to add a slightly different
 DNS configuration: you'll have to set the ALIAS to have the subdomain you wish to utilise (e.g. you're reading this post on
-<mark>blog</mark>.bbonsai.org - my main domain is bbonsai; another sub-domain I have is <mark>cv</mark>).
+**blog**.bbonsai.org - my main domain is bbonsai; another sub-domain I have is **cv**).
 <br>
 In any case - if you are stuck and an LLM doesn't help, please feel free to [contact me](https://cv.bbonsai.org) anytime!
 
