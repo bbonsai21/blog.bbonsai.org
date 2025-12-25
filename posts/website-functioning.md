@@ -56,7 +56,7 @@ After this you're ready to connect your webpage repo to your domain:<br>
 5. add your custom domain as `https://your-domain.postfix` (e.g. `https://bbonsai.org` - no need of the `www.` subdomain prefix)<br>
 6. wait for it to complete the verification<br>
 7. tick `Enforce HTTPS`.<br>
-<br>
+
 Please, notice that options 5-7 could take some minutes for them to complete. Don't panic if it's not instantaneous. Wait until Github gives 
 you the OK to proceed.<br>
 If you encounter a problem during any of these steps, best thing is to either browse it or ask an LLM model. I have played with both until
@@ -155,9 +155,6 @@ the old page. Until the cache is present, the old website remains there, and you
 (that I hopefully haven't used before on the same webpage, else also that there is probably cached - lmao) or, in alternative, the private window.
 Notice this isn't jsut a problem with website's content, but also with its security certificates: your website will fully cache also the
 HTTPS certificate, so if your website was unsecure it may appear unsafe also now that you have set up a certificate correctly.
-
-<br>
-<br>
 
 # Projects for the blog
 
