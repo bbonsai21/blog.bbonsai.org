@@ -167,4 +167,4 @@ of their time. That's the greatest of all honours: being part of someone else's 
 <br>
 Have a prosperous life, Internet.
 
-[1]: [Here](https://learn.microsoft.com/en-us/windows/wsl/install) is a possible solution!
+[^1]: [Here](https://learn.microsoft.com/en-us/windows/wsl/install) is a possible solution!
