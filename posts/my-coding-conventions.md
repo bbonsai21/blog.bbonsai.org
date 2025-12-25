@@ -86,7 +86,7 @@ that it doesn't elongate excessively horizontally. E.g.:
 public static void
 main( String[] args )
 ```
-<br>
+
 **Reason**: maintains the flow of the latest written letters, that typically are lower-case. E.g. Math.pow(); 
 <br>
 - getter/setter: **getCamelCase()** XOR **setCamelCase()**
@@ -113,6 +113,7 @@ the implementing class to use certain methods
 <br>
 4. complementary:
 - enums: **CAPS_SNAKE_CASE**
+<br>
 **Reason**: they are logically similar to constants, although with some minor differences. Still allows to narrow down the type.
 <br>
 # General rules
