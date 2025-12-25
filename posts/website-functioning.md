@@ -84,7 +84,7 @@ and `blog-save` to push it to Github.
 Clearly, this works very well if you've set up the right commands. Here's how to do it on Linux (to do it on Windows or other systems, it's up to
 you translating the following to your OS-specific bash-like language [^1]):
 <br>
-Here we presume you already have a Github page; then, create a folder anywhere you wish to keep your website locally, and type:<br>
+Here we presume you already have a Github page; then, create a folder anywhere you wish to keep your website locally, and type:
 ```bash
 cd [your-local-folder-path]
 git pull [link-to-your-github-repo]
