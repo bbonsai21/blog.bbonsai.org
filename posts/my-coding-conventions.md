@@ -1,7 +1,31 @@
 # My coding conventions - what, why, how
 
-Personally I use *slightly* different conventions based off the programming language I'm using. OOP will not have the same
+I use *slightly* different conventions based off the programming language I'm using. OOP will not have the same
 rules that other langs might have.
+
+# General rules
+
+- Obvious methods/functions MUST NOT have any comment ( e.g. getters, setters ), so that no vertical space is wasted.
+<br>
+- Anything else must have multi-line comments (even if on 1 singe line), so it's detected
+by the LSP. Comments must shortly describe what the function does and how it behaves.
+<br>
+- Statement evaluation always uses parentheses, even if the language deems them optional. Whenever round brackets are opened, whatever is inside
+shall be separeted by 1 space from the brackets (e.g. `( arg1, arg2, arg2 )` ), with commas between arguments touching the preceding one but not
+the upcoming one.
+<br>
+- Statement bodies start always 2 lines below the statement first line, meaning that the opening curly brace is always placed 1 line below the
+first statement line. E.g.
+
+```C
+if ( isAlive() )
+{
+        do_whatever();
+}
+```
+
+- If a language allows for classes to be in the samae file, that should be absolutely avoided. 1 file, 1 class. This works especially for Lua,
+where we don't really have classes but we can emulate them with a bit of metatables tweaking.
 
 # C
 1. variables
@@ -116,23 +140,3 @@ the implementing class to use certain methods
 <br>
 **Reason**: they are logically similar to constants, although with some minor differences. Still allows to narrow down the type.
 <br>
-# General rules
-
-- Obvious methods/functions MUST NOT have any comment ( e.g. getters, setters ), so that no vertical space is wasted.
-<br>
-- Anything else must have multi-line comments (even if on 1 singe line), so it's detected
-by the LSP. Comments must shortly describe what the function does and how it behaves.
-<br>
-- Statement evaluation always uses parentheses, even if the language deems them optional. Whenever round brackets are opened, whatever is inside
-shall be separeted by 1 space from the brackets (e.g. `( arg1, arg2, arg2 )` ), with commas between arguments touching the preceding one but not
-the upcoming one.
-<br>
-- Statement bodies start always 2 lines below the statement first line, meaning that the opening curly brace is always placed 1 line below the 
-first statement line. E.g.
-
-```C
-if ( isAlive() )
-{
-	do_whatever();
-}
-```
